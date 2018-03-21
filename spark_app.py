@@ -25,9 +25,9 @@ def get_uber_data():
 	transformed.createOrReplaceTempView("data_table")
 	transformed.cache()
 	centerList=list()
-	centers1 = model.clusterCenters()
+	cluster_centers = model.clusterCenters()
 	count=int()
-	for center in centers1:
+	for center in cluster_centers:
 		centersIndList=list()
 		centersIndList.append(format(center[0], '.8f'))
 		centersIndList.append(format(center[1], '.8f'))
